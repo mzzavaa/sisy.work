@@ -1,0 +1,240 @@
+{{ define "main" }}
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-label">Career and Opportunities Board for Women Experts</p>
+      <h1>Opportunities that<br><em>match your expertise.</em></h1>
+      <p class="hero-sub">Advisory roles, board seats, consulting gigs, speaking opportunities, and more - all curated for women experts who are ready to be found and hired for what they know.</p>
+      <div class="hero-actions">
+        <a href="#opportunities" class="btn btn-primary btn-lg">Browse Opportunities</a>
+        <a href="#availability" class="btn btn-ghost btn-lg">List Your Availability</a>
+      </div>
+      <div class="hero-trust">
+        <i data-lucide="shield-check"></i>
+        <span>Free for experts &nbsp;·&nbsp; Vetted companies &nbsp;·&nbsp; No cold outreach needed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Opportunities -->
+  <section class="section section-alt" id="opportunities">
+    <div class="container">
+      <h2 class="fade-in">Featured Opportunities</h2>
+      <p class="section-lead fade-in">Hand-picked roles and gigs posted by companies actively seeking women experts.</p>
+
+      <!-- Category Filters -->
+      <div class="category-filters fade-in">
+        <span class="category-pill active">All</span>
+        <span class="category-pill">Leadership</span>
+        <span class="category-pill">Advisory</span>
+        <span class="category-pill">Consulting</span>
+        <span class="category-pill">Board Seats</span>
+        <span class="category-pill">Speaking</span>
+      </div>
+
+      <div class="grid grid-3">
+
+        <div class="opp-card fade-in">
+          <div class="opp-type">
+            <i data-lucide="briefcase"></i>
+            Advisory Role
+          </div>
+          <h3>Advisory Board Member</h3>
+          <p>Early-stage FinTech startup seeking a senior finance or risk expert to join advisory board. Equity + monthly retainer. Remote-first, 2h/month commitment.</p>
+          <div class="opp-details">
+            <span class="opp-detail"><i data-lucide="map-pin"></i>Remote</span>
+            <span class="opp-detail"><i data-lucide="clock"></i>2h / month</span>
+            <span class="opp-detail"><i data-lucide="trending-up"></i>€2,000 / month</span>
+          </div>
+          <a href="#opportunities" class="btn btn-primary btn-sm">View Role</a>
+        </div>
+
+        <div class="opp-card fade-in">
+          <div class="opp-type">
+            <i data-lucide="mic"></i>
+            Speaking Gig
+          </div>
+          <h3>Keynote Speaker - Women in Leadership Summit</h3>
+          <p>Annual summit in Berlin seeking a keynote speaker on inclusive leadership, organizational culture, or women in tech. Paid engagement.</p>
+          <div class="opp-details">
+            <span class="opp-detail"><i data-lucide="map-pin"></i>Berlin, Germany</span>
+            <span class="opp-detail"><i data-lucide="calendar"></i>June 2025</span>
+            <span class="opp-detail"><i data-lucide="dollar-sign"></i>Paid</span>
+          </div>
+          <a href="#opportunities" class="btn btn-primary btn-sm">View Role</a>
+        </div>
+
+        <div class="opp-card fade-in">
+          <div class="opp-type">
+            <i data-lucide="award"></i>
+            Board Position
+          </div>
+          <h3>Board Director - Non-Profit Healthcare</h3>
+          <p>US-based healthcare non-profit seeking a Board Director with clinical, policy, or public health expertise. Quarterly in-person meetings + equity.</p>
+          <div class="opp-details">
+            <span class="opp-detail"><i data-lucide="map-pin"></i>US (Hybrid)</span>
+            <span class="opp-detail"><i data-lucide="clock"></i>Quarterly</span>
+            <span class="opp-detail"><i data-lucide="heart"></i>Volunteer + Equity</span>
+          </div>
+          <a href="#opportunities" class="btn btn-primary btn-sm">View Role</a>
+        </div>
+
+      </div>
+      <div class="section-action">
+        <a href="#opportunities" class="btn btn-outline">View All Opportunities</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Companies Seeking Female Experts -->
+  <section class="section" id="companies">
+    <div class="container">
+      <h2 class="fade-in">Companies Seeking Female Experts</h2>
+      <p class="section-lead fade-in">These organizations are actively building diverse leadership and actively looking for women with your background.</p>
+      <div class="grid grid-3">
+
+        <div class="company-card fade-in">
+          <div class="company-logo"><i data-lucide="zap"></i></div>
+          <h3>TechForward</h3>
+          <p>B2B SaaS scale-up seeking advisors in product strategy, enterprise sales, and AI ethics.</p>
+          <div style="margin-top:14px">
+            <span class="mentor-tag">3 open roles</span>
+          </div>
+        </div>
+
+        <div class="company-card fade-in">
+          <div class="company-logo"><i data-lucide="bar-chart-2"></i></div>
+          <h3>FinScale</h3>
+          <p>FinTech Series B seeking board members and advisors with regulatory, compliance, and banking expertise.</p>
+          <div style="margin-top:14px">
+            <span class="mentor-tag">2 open roles</span>
+          </div>
+        </div>
+
+        <div class="company-card fade-in">
+          <div class="company-logo"><i data-lucide="globe"></i></div>
+          <h3>ImpactVC</h3>
+          <p>Impact investing fund building an advisory council of women experts across climate, health, and education.</p>
+          <div style="margin-top:14px">
+            <span class="mentor-tag">5 open roles</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="section-action">
+        <a href="mailto:hello@sisy.world" class="btn btn-outline">List Your Company</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reverse Job Board -->
+  <section class="section section-alt" id="availability">
+    <div class="container">
+      <h2 class="fade-in">The Reverse Board</h2>
+      <p class="section-lead fade-in">Why wait for companies to post? List your availability and let the right opportunities find you.</p>
+      <div class="for-whom-grid">
+
+        <div class="for-whom-card highlight fade-in">
+          <div class="for-whom-badge">
+            <i data-lucide="sparkles"></i>
+            For Women Experts
+          </div>
+          <h3>You post. Companies apply to you.</h3>
+          <p>Create a short availability listing that tells companies what you bring, what you're open to, and how to reach you. They come to you.</p>
+          <ul class="benefit-list">
+            <li><i data-lucide="check-circle"></i>List your expertise and availability in 5 minutes</li>
+            <li><i data-lucide="check-circle"></i>Set your terms - rate, commitment, location</li>
+            <li><i data-lucide="check-circle"></i>Receive only relevant inbound inquiries</li>
+            <li><i data-lucide="check-circle"></i>Linked to your full sisy.my profile</li>
+            <li><i data-lucide="check-circle"></i>Free for verified SISY experts</li>
+          </ul>
+        </div>
+
+        <div class="for-whom-card fade-in">
+          <div class="for-whom-badge">
+            <i data-lucide="building-2"></i>
+            For Companies
+          </div>
+          <h3>Find experts who are ready and open.</h3>
+          <p>Browse women experts who have explicitly listed their availability. No cold outreach, no guessing - they want to be found.</p>
+          <ul class="benefit-list">
+            <li><i data-lucide="check-circle"></i>Search by expertise, industry, and commitment level</li>
+            <li><i data-lucide="check-circle"></i>View full profiles before reaching out</li>
+            <li><i data-lucide="check-circle"></i>Contact directly through SISY</li>
+            <li><i data-lucide="check-circle"></i>Faster hiring than traditional search</li>
+            <li><i data-lucide="check-circle"></i>Part of your company listing subscription</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="fade-in">Pricing</h2>
+      <p class="section-lead fade-in">Free for experts. Simple fees for companies who want access to this talent.</p>
+      <div class="pricing-grid">
+
+        <div class="pricing-card fade-in">
+          <p class="pricing-label">For Experts</p>
+          <p class="pricing-name">Free</p>
+          <p class="pricing-price">€0 <span>/ always</span></p>
+          <p class="pricing-desc">Browsing, applying, and listing your availability is completely free for women experts on SISY.</p>
+          <ul class="pricing-features">
+            <li><i data-lucide="check-circle"></i>Browse all opportunities</li>
+            <li><i data-lucide="check-circle"></i>Apply to any listing</li>
+            <li><i data-lucide="check-circle"></i>List your availability</li>
+            <li><i data-lucide="check-circle"></i>Linked to your sisy.my profile</li>
+          </ul>
+          <a href="#opportunities" class="btn btn-outline" style="width:100%;display:block;text-align:center">Browse Opportunities</a>
+        </div>
+
+        <div class="pricing-card featured fade-in">
+          <p class="pricing-label">For Companies</p>
+          <p class="pricing-name">Company Listing</p>
+          <p class="pricing-price">€99 <span>/ post</span></p>
+          <p class="pricing-desc">Post an opportunity that reaches women experts actively looking for roles like yours.</p>
+          <ul class="pricing-features">
+            <li><i data-lucide="check-circle"></i>30-day listing visibility</li>
+            <li><i data-lucide="check-circle"></i>Promoted in SISY newsletter</li>
+            <li><i data-lucide="check-circle"></i>Access to Reverse Board experts</li>
+            <li><i data-lucide="check-circle"></i>Applicant management dashboard</li>
+            <li><i data-lucide="check-circle"></i>Company profile on SISY.work</li>
+          </ul>
+          <a href="mailto:hello@sisy.world" class="btn btn-primary" style="width:100%;display:block;text-align:center">Post an Opportunity</a>
+        </div>
+
+        <div class="pricing-card fade-in">
+          <p class="pricing-label">For Experts</p>
+          <p class="pricing-name">Expert Showcase</p>
+          <p class="pricing-price">€29 <span>/ month</span></p>
+          <p class="pricing-desc">Featured placement in the Reverse Board so the right companies see you first.</p>
+          <ul class="pricing-features">
+            <li><i data-lucide="check-circle"></i>Featured availability listing</li>
+            <li><i data-lucide="check-circle"></i>Priority placement in search</li>
+            <li><i data-lucide="check-circle"></i>Highlighted in company view</li>
+            <li><i data-lucide="check-circle"></i>Monthly visibility analytics</li>
+          </ul>
+          <a href="#availability" class="btn btn-outline" style="width:100%;display:block;text-align:center">Get Featured</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section-cta">
+    <div class="container">
+      <h2 class="fade-in">The right opportunity is looking for you.</h2>
+      <p class="section-lead fade-in">Stop waiting for someone to think of you. Get on SISY.work and make sure the right companies can find you when they need what you know.</p>
+      <div class="hero-actions fade-in">
+        <a href="#opportunities" class="btn btn-primary btn-lg">Browse Opportunities</a>
+        <a href="https://sisy.social" class="btn btn-outline btn-lg">Join the Community</a>
+      </div>
+    </div>
+  </section>
+
+{{ end }}

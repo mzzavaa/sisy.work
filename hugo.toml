@@ -1,0 +1,10 @@
+baseURL = "https://sisy.work/"
+languageCode = "en-us"
+title = "SISY.work - Career and Opportunities Board for Women Experts"
+
+[params]
+  description = "Opportunities that match your expertise. Advisory roles, board seats, consulting gigs, and speaking opportunities - curated for women experts."
+  tagline = "Opportunities that match your expertise."
+
+[markup.goldmark.renderer]
+  unsafe = true

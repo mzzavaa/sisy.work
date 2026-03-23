@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - SISY{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - SISY{{ end }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <script>
+    (function() {
+      const saved = localStorage.getItem('sisy-theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="{{ .Site.BaseURL }}" class="nav-logo">SISY<span>.</span>work</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="#opportunities">Browse Opportunities</a>
+        <a href="#companies">For Companies</a>
+        <a href="#availability">List Availability</a>
+        <a href="#pricing">Pricing</a>
+        <a href="https://sisy.social">Community</a>
+        <button onclick="document.getElementById('opportunities').scrollIntoView({behavior:'smooth'})" class="btn btn-primary btn-sm">Browse Opportunities</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+        <i data-lucide="sun" class="icon-sun"></i>
+        <i data-lucide="moon" class="icon-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  {{ block "main" . }}{{ end }}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <p class="footer-brand">SISY<span>.</span>work</p>
+          <p class="footer-tagline">Opportunities that match your expertise. Advisory roles, board seats, and speaking gigs for women experts.</p>
+          <div class="footer-social">
+            <a href="https://linkedin.com/company/sisyworld" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://instagram.com/sisy.world" aria-label="Instagram" target="_blank" rel="noopener">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="https://sisy.social" aria-label="Community" target="_blank" rel="noopener">
+              <i data-lucide="users"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="https://sisy.world">sisy.world - Home</a></li>
+            <li><a href="https://sisy.my">sisy.my - Profiles</a></li>
+            <li><a href="https://sisy.live">sisy.live - Events</a></li>
+            <li><a href="https://sisy.guru">sisy.guru - Mentoring</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Opportunities</h4>
+          <ul>
+            <li><a href="https://sisy.today">sisy.today - Daily CFPs</a></li>
+            <li><a href="https://sisy.cam">sisy.cam - Recording</a></li>
+            <li><a href="https://sisy.team">sisy.team - Organizers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="https://sisy.social">sisy.social</a></li>
+            <li><a href="https://discord.gg/sisy">Discord</a></li>
+            <li><a href="https://sisy.social/about/">About SISY</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Companies</h4>
+          <ul>
+            <li><a href="#companies">Post a Role</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="mailto:hello@sisy.world">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; {{ now.Year }} SISY. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="/impressum/">Impressum</a>
+          <a href="/privacy/">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('sisy-theme', next);
+    }
+
+    // Scroll fade-in animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
